@@ -24,7 +24,7 @@ jobs:
             dotnet publish blazorwasm.csproj --configuration Release
         # Publish the website
         - name: GitHub Pages action
-          if: ${{ github.ref == 'refs/heads/master' }} # Publish only when the push is on master
+          if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on main
           uses: peaceiris/actions-gh-pages@v3
           with:
             github_token: ${{ secrets.PUBLISH_TOKEN }}

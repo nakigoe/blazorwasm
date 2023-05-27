@@ -7,11 +7,9 @@
     <BlazorEnableCompression>true</BlazorEnableCompression>
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
     <RunAOTCompilation>true</RunAOTCompilation>
-    <BlazorWasmPrerenderingEnvironment>Production</BlazorWasmPrerenderingEnvironment>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BlazorWasmPreRendering.Build" Version="2.0.0-preview.8" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.5" PrivateAssets="all" />
   </ItemGroup>

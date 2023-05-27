@@ -1,2 +1,3 @@
-# blazorwasm
-Blazor WebAssembly website template
+# blazorwasm .NET 7
+Blazor WebAssembly production-level (static websites' hosting-ready) template
+

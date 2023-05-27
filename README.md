@@ -18,7 +18,7 @@ The website for hosting is published into the `gh-pages` branch of the repositor
 
 I recommend utilizing Vercel as a free static websites hosting service since it's completely free, has seamless integration with GitHub, simple interface, power&#8209;user settings (environment, etc). Disclaimer: I have no affiliation with Vercel.
 
-YOU ARE ALLOWED TO KEEP THE GITHUB REPOSITORY <em><b>PRIVATE</b></em> WHEN PUBLISHING THE WEBSITE WITH VERCEL!!!
+Even more good news: You are allowed to keep the GitHub repository <em><b>PRIVATE</b></em> when publishing the website with Vercel!!!
 
 
 <br> Please write if You would like to utilize my services or to take programming lessons: nakigoetenshi@gmail.com

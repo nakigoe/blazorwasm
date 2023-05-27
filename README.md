@@ -4,11 +4,10 @@ Production-level (static websites' hosting-ready) template.
 
 The published Blazor WebAssembly website code that runs live on the code provided in this repository:
 
-https://blazorwasm.nakigoe.org
+<h1><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
 
 
-The freshest code is always here: https://github.com/nakigoe/blazorwasm
-<br> Please write if You would like programming lessons: nakigoetenshi@gmail.com
+<br> Please write if You would like to utilize my services or to take programming lessons: nakigoetenshi@gmail.com
 <br> $60 per hour
 
 <h2 style="margin: 0 auto" align="center">Put stars on GitHub and share!!!</h2>

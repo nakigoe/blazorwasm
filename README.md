@@ -7,6 +7,8 @@ The website for hosting is published into the `gh-pages` branch of the repositor
 
 I recommend utilizing Vercel as a free static websites hosting service since it's completely free, has seamless integration with GitHub, simple interface, power&#8209;user settings (environment, etc). Disclaimer: I have no affiliation with Vercel.
 
+YOU ARE ALLOWED TO KEEP THE GITHUB REPOSITORY PRIVATE WHEN PUBLISHING THE WEBSITE WITH VERCEL!!!
+
 
 The published Blazor WebAssembly website that runs live on the production&#8209;grade code provided in this repository:
 

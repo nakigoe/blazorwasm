@@ -2,7 +2,10 @@
 Production-level (static websites' hosting-ready) template
 
 
-The website for hosting is published into the `gh-pages` branch of the repository with `GitHub&nbsp;Actions`, You have to point out to the `gh-pages` branch from Your hosting provider. 
+The website for hosting is published into the `gh-pages` branch of the repository with `GitHub Actions`, 
+
+
+<b>You have to point out to the `gh-pages` branch from Your hosting provider.</b>
 
 
 I recommend utilizing Vercel as a free static websites hosting service since it's completely free, has seamless integration with GitHub, simple interface, power&#8209;user settings (environment, etc). Disclaimer: I have no affiliation with Vercel.

@@ -4,12 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>blazorwasm</title>
+    <title>nakigoe</title>
+    <script type="text/javascript">
+        (function (l) {
+            if (l.search[1] === '/') {
+            var decoded = l.search.slice(1).split('&').map(function (s) {
+                return s.replace(/~and~/g, '&')
+            }).join('?');
+            window.history.replaceState(null, null,
+                l.pathname.slice(0, -1) + decoded + l.hash
+            );
+            }
+        }(window.location))
+    </script>  
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="blazorwasm.styles.css" rel="stylesheet" />
+    <link href="nakigoe.styles.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,7 +38,44 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <script src="_framework/blazor.webassembly.js"></script>
+
+<!--------- Shamanic, obscure, technical scripts section --------->
+<script src="BlazorEnvironment.js"></script>
+<script>
+    const originalFetch = fetch;
+    fetch = async (url, options) => {
+        const response = await originalFetch(url, options);
+        return url.endsWith('/blazor.boot.json')
+            ? new Response(await response.blob(), { headers: { 'blazor-environment': window.BlazorEnvironment } })
+            : response;
+    };
+</script>
+<script src="/_framework/blazor.webassembly.js" autostart="false"></script>
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
+<script type="module">
+  import { BrotliDecode } from './decode.min.js';
+  Blazor.start({
+    loadBootResource: function (type, name, defaultUri, integrity) {
+      if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
+        return (async function () {
+          const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+          if (!response.ok) {
+            throw new Error(response.statusText);
+          }
+          const originalResponseBuffer = await response.arrayBuffer();
+          const originalResponseArray = new Int8Array(originalResponseBuffer);
+          const decompressedResponseArray = BrotliDecode(originalResponseArray);
+          const contentType = type ===
+            'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+          return new Response(decompressedResponseArray,
+            { headers: { 'content-type': contentType } });
+        })();
+      }
+    }
+  });
+</script>
+
 </body>
 
 </html>

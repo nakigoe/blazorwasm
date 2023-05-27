@@ -25,13 +25,13 @@ jobs:
 
         # Publish the website
         - name: GitHub Pages action
-          if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on master
+          if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on the main branch
           uses: peaceiris/actions-gh-pages@v3
           with:
-            github_token: ${{ secrets.PUBLISH_TOKEN }}
+            github_token: ${{ secrets.NAKIGOE_PUBLISH_TOKEN }}
             publish_branch: gh-pages
             publish_dir: bin/Release/net7.0/publish/wwwroot
             allow_empty_commit: false
             keep_files: false
             force_orphan: true
-            cname: nakigoe.org
+            # cname: blazorwasm.nakigoe.org

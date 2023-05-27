@@ -28,7 +28,7 @@ jobs:
           if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on the main branch
           uses: peaceiris/actions-gh-pages@v3
           with:
-            github_token: ${{ secrets.NAKIGOE_PUBLISH_TOKEN }}
+            github_token: ${{ secrets.PUBLISH_TOKEN_NAKIGOE }}
             publish_branch: gh-pages
             publish_dir: bin/Release/net7.0/publish/wwwroot
             allow_empty_commit: false

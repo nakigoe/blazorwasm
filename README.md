@@ -1,7 +1,10 @@
 # Blazor WebAssembly (blazorwasm) on .NET 7 hosting ready website
 production-level (static websites' hosting-ready) template
+Published Blazor WebAssembly website (runs live on the code provided in this repository): 
+https://blazorwasm.nakigoe.org
 
-The freshest version is always here: https://github.com/nakigoe/blazorwasm
+
+The freshest code is always here: https://github.com/nakigoe/blazorwasm
 <br> Please write if You would like programming lessons: nakigoetenshi@gmail.com
 <br> $60 per hour
 

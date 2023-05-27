@@ -1,8 +1,8 @@
-# Blazor WebAssembly (blazorwasm) on .NET 7 hosting ready website
+# Blazor WebAssembly (blazorwasm) on .NET 7 hosting&#8209;ready website
 Production-level (static websites' hosting-ready) template.
 
 
-The published Blazor WebAssembly website code that runs live on the code provided in this repository:
+The published Blazor WebAssembly website that runs live on the production&#8209;grade code provided in this repository:
 
 <h1><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
 

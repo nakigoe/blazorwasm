@@ -16,10 +16,9 @@ jobs:
             
         - name: Install dependencies
           run: |
-            dotnet clean
-            dotnet install wasm-tools
-            dotnet restore
             dotnet workload restore
+            dotnet clean
+            dotnet restore
 
         # Generate the website
         - name: Publish

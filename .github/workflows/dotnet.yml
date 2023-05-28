@@ -15,7 +15,10 @@ jobs:
             dotnet-version: 7.0.x
             
         - name: Install dependencies
-          run: dotnet workload restore
+          run: |
+            dotnet clean
+            dotnet restore
+            dotnet workload restore
 
         # Generate the website
         - name: Publish

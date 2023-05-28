@@ -17,7 +17,6 @@ jobs:
         - name: Install dependencies
           run: |
             dotnet clean
-            dotnet restore
             dotnet workload restore
 
         # Generate the website

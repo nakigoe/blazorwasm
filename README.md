@@ -1,4 +1,6 @@
-<h1><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
+<kbd style="width: 2em; height: 2em;"><a href="#en">ENGLISH</a></kbd> | <kbd><a href="#ru">РУССКИЙ</a></kbd>
+
+<h1 id="en" name="en"><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
 
 
 # Blazor WebAssembly .NET 7 hosting&#8209;ready website
@@ -25,6 +27,20 @@ Even more good news: You are allowed to keep the GitHub repository <em><b>PRIVAT
 <br> $60 per hour
 
 <h2 style="margin: 0 auto" align="center">Put stars on GitHub and share!!!</h2>
+
+<hr>
+
+<h1 id="ru" name="ru"><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
+## Темплейт сайта ASP.NET Core Blazor WebAssembly
+⭐ Код сайта: 
+<br> <a href="https://github.com/nakigoe/blazorwasm" target="_blank">github.com/nakigoe/blazorwasm</a>
+
+❥ Опубликованный темплейт сайта ASP.NET Core Blazor WebAssembly: <a href="https://blazorwasm.nakigoe.org" target="_blank">BLAZORWASM.NAKIGOE.ORG</a>
+
+❥ Подробные инструкции к темплейту: <a href="https://nakigoe.org/ru/articles/host" target="_blank">«Бесплатный хостинг сайта C# Blazor WebAssembly»</a>
+
+<h2 style="margin: 0 auto" align="center">Добавьте звезду на репозиторий и делитесь сноской со всеми!</h2>
+
 <br>
 <p style="margin: 0 auto" align="center">Please cast an eye on my website:</p>
 <h1><a href="https://nakigoe.org/" style="background-color: black;" target="_blank">

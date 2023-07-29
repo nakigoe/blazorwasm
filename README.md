@@ -31,7 +31,10 @@ Even more good news: You are allowed to keep the GitHub repository <em><b>PRIVAT
 <hr>
 
 <h1 id="ru" name="ru"><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
+
 ## Темплейт сайта ASP.NET Core Blazor WebAssembly
+
+
 ⭐ Код сайта: 
 <br> <a href="https://github.com/nakigoe/blazorwasm" target="_blank">github.com/nakigoe/blazorwasm</a>
 

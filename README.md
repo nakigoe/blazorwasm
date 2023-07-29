@@ -12,7 +12,7 @@ The published Blazor WebAssembly website runs live on the production&#8209;grade
 ## Workflow
 
 
-The website for hosting is published into the `gh-pages` branch of the repository with `GitHub Actions`, 
+The website for hosting is published into the `gh-pages` branch of the repository with `GitHub Actions` ,
 
 
 <b>You have to point to the `gh-pages` branch of Your repository from Your hosting provider.</b>

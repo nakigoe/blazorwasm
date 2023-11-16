@@ -6,7 +6,7 @@
     <script src="https://www.w3counter.com/tracker.js?id=142905"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Blazor WebAssembly .NET 7 Starting Template</title>
+    <title>Blazor WebAssembly .NET 8 Starting Template</title>
     <meta name="description" content="Blazor WebAssembly .NET 7 production-ready starting template, coming from GitHub Actions and Vercel. Compression, linking, pre-rendering and analytics enabled.">
     <base href="/">
     <link href="css/styles.css" rel="stylesheet"><!-- GLOBAL user defined styles go into that file -->
@@ -47,7 +47,29 @@
         <a class="dismiss">🗙</a>
     </div>
 
-<script src="/_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script type="module">
+        import { BrotliDecode } from './decode.min.js';
+        Blazor.start({
+          loadBootResource: function (type, name, defaultUri, integrity) {
+            if (type !== 'dotnetjs' && location.hostname !== 'localhost' && type !== 'configuration') {
+              return (async function () {
+                const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                if (!response.ok) {
+                  throw new Error(response.statusText);
+                }
+                const originalResponseBuffer = await response.arrayBuffer();
+                const originalResponseArray = new Int8Array(originalResponseBuffer);
+                const decompressedResponseArray = BrotliDecode(originalResponseArray);
+                const contentType = type === 
+                  'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                return new Response(decompressedResponseArray, 
+                  { headers: { 'content-type': contentType } });
+              })();
+            }
+          }
+        });
+      </script>
 <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </body>

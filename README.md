@@ -2,26 +2,21 @@
 
 <h1 id="en" name="en"><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
 
+# Blazor WebAssembly .NET 8 hosting&#8209;ready website
 
-# Blazor WebAssembly .NET 7 hosting&#8209;ready website
 Production-level (static websites' hosting-ready) manually upgraded blazorwasm template.
 
 The published Blazor WebAssembly website runs live on the production&#8209;grade code provided in this repository.
 
-
 ## Workflow
-
 
 The website for hosting is published into the `gh-pages` branch of the repository with `GitHub Actions` ,
 
-
 <b>You have to point to the `gh-pages` branch of Your repository from Your hosting provider.</b>
-
 
 I recommend utilizing Vercel as a free static websites hosting service since it's completely free, has seamless integration with GitHub, simple interface, power&#8209;user settings (environment, etc). Disclaimer: I have no affiliation with Vercel.
 
 Even more good news: You are allowed to keep the GitHub repository <em><b>PRIVATE</b></em> when publishing the website with Vercel!!!
-
 
 <br> Please write if You would like to utilize my services or to take programming lessons: nakigoetenshi@gmail.com
 <br> $60 per hour
@@ -87,4 +82,3 @@ Even more good news: You are allowed to keep the GitHub repository <em><b>PRIVAT
       https://nakigoe.org/_SRC/logo-hot-bevel-300.jpg 300w"
     alt="NAKIGOE.ORG">
 </a></h1>
-

@@ -7,7 +7,6 @@
     <RunAOTCompilation>true</RunAOTCompilation>
     <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
     <CompressionEnabled>true</CompressionEnabled>
-    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>

@@ -17,6 +17,7 @@ jobs:
         # Install wasm-tools and other dependencies
         - name: Install dependencies
           run: dotnet workload restore
+          run: dotnet workload install wasm-tools
 
         # Clean up the previous build artefacts (just in case)
         - name: Clean up artefacts from previous builds

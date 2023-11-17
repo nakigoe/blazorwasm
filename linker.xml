@@ -2,7 +2,7 @@
   <assembly fullname="nakigoe">
     <type fullname="nakigoe.Layouts.MainLayout" preserve="all" />
     <type fullname="nakigoe.Pages.Index" preserve="all" />
-    <type fullname="nakigoe.Pages.FetchData" preserve="all" />
+    <type fullname="nakigoe.Pages.FetchData+WeatherForecast" preserve="all" />
     <type fullname="nakigoe.Pages.Counter" preserve="all" />
   </assembly>
 </linker>

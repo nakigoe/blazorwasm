@@ -51,10 +51,11 @@
 
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script type="module">
-        import { BrotliDecode } from '/decode.min.js';
-        Blazor.start({
+      import { BrotliDecode } from './decode.min.js';
+      Blazor.start({
+        webAssembly: {
           loadBootResource: function (type, name, defaultUri, integrity) {
-            if (type !== 'dotnetjs' && location.hostname !== 'localhost' && type !== 'configuration') {
+            if (type !== 'dotnetjs' && location.hostname !== 'localhost' && type !== 'configuration' && type !== 'manifest') {
               return (async function () {
                 const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
                 if (!response.ok) {
@@ -70,8 +71,9 @@
               })();
             }
           }
-        });
-      </script>
+        }
+      });
+    </script>
 <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </body>

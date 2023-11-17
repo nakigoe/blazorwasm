@@ -11,7 +11,8 @@ ConfigureServices(builder.Services, builder.HostEnvironment.BaseAddress);
 await builder.Build().RunAsync();
 
 //Pre-rendiring with NuGet package mod: extract the service-registration process to the static local function
-static void ConfigureServices(IServiceCollection services, string baseAddress)
+static void ConfigureServices(IServiceCollection Services, string baseAddress)
 {
-  services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAddress) });
+  Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAddress) });
 }
+

@@ -1,7 +1,4 @@
 {
-  "redirects": [
-    { "source": "/_framework", "destination": "/", "permanent": true }
-  ],
   "headers": [
     {
       "source": "/(.*)",

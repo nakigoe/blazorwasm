@@ -1,45 +1,46 @@
-name: 'Publish application'
+name: "Publish application"
 on: push
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        # Checkout the code
-        - uses: actions/checkout@v4
+      # Checkout the code
+      - uses: actions/checkout@v4
 
-        # Install .NET Core SDK
-        - name: Setup .NET Core
-          uses: actions/setup-dotnet@v3
-          with: 
-            dotnet-version: 8.0.x
-            
-        # Install wasm-tools and other dependencies
-        - name: Install dependencies
-          run: dotnet workload restore
-          run: dotnet workload install wasm-tools
+      # Install .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
 
-        # Clean up the previous build artefacts (just in case)
-        - name: Clean up artefacts from previous builds
-          run: |
-            dotnet clean
-            dotnet restore
+      # Install wasm-tools and other dependencies
+      - name: Install dependencies
+        run: |
+          dotnet workload restore
+          dotnet workload install wasm-tools
 
-        # Generate the website
-        - name: Publish
-          run: |
-            cp wwwroot/index.html wwwroot/404.html
-            dotnet publish nakigoe.csproj --configuration Release
+      # Clean up the previous build artefacts (just in case)
+      - name: Clean up artefacts from previous builds
+        run: |
+          dotnet clean
+          dotnet restore
 
-        # Publish the website
-        - name: GitHub Pages action
-          if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on the main branch
-          uses: peaceiris/actions-gh-pages@v3
-          with:
-            github_token: ${{ secrets.PUBLISH_TOKEN_NAKIGOE }}
-            publish_branch: gh-pages
-            publish_dir: bin/Release/net8.0/publish/wwwroot
-            allow_empty_commit: false
-            keep_files: false
-            force_orphan: true
-            cname: blazorwasm.nakigoe.org
+      # Generate the website
+      - name: Publish
+        run: |
+          cp wwwroot/index.html wwwroot/404.html
+          dotnet publish nakigoe.csproj --configuration Release
+
+      # Publish the website
+      - name: GitHub Pages action
+        if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on the main branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PUBLISH_TOKEN_NAKIGOE }}
+          publish_branch: gh-pages
+          publish_dir: bin/Release/net8.0/publish/wwwroot
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: true
+          cname: blazorwasm.nakigoe.org

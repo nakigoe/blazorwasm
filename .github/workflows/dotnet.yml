@@ -20,12 +20,6 @@ jobs:
           dotnet workload restore
           dotnet workload install wasm-tools
 
-      # Clean up the previous build artefacts (just in case)
-      - name: Clean up artefacts from previous builds
-        run: |
-          dotnet clean
-          dotnet restore
-
       # Generate the website
       - name: Publish
         run: |

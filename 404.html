@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://www.w3counter.com/tracker.js?id=142905"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Blazor WebAssembly .NET 8 Starting Template</title>
+    <meta name="description" content="Blazor WebAssembly .NET 7 production-ready starting template, coming from GitHub Actions and Vercel. Compression, linking, pre-rendering and analytics enabled.">
+    <base href="/">
+    <link href="css/styles.css" rel="stylesheet"><!-- GLOBAL user defined styles go into that file -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="nakigoe.styles.css" rel="stylesheet">
+    <link rel="image_src" href="https://nakigoe.org/_SRC/nakigoe-academy-night-2048.jpg" type="image/jpeg">
+    <meta name="image_width" content="2048">
+    <meta name="image_height" content="2048">
+    <meta property="og:image:secure_url" content="https://nakigoe.org/_SRC/nakigoe-academy-night-2048.jpg">
+    <meta property="og:image" content="https://nakigoe.org/_SRC/nakigoe-academy-night-2048.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="2048">
+    <meta property="og:image:height" content="2048">
+    <meta name="theme-color" content="#260040">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#260040">
+    <meta name="msapplication-navbutton-color" content="#260040">
+    <meta name="msapplication-TileColor" content="#260040">
+    <meta name="msapplication-TileImage" content="_SVG/icon.svg">
+    <link rel="icon" href="_SVG/icon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon-precomposed" href="_SVG/icon.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-startup-image" href="_SVG/icon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://blazorwasm.nakigoe.org">
+    <link rel="preload" href="_framework/blazor.boot.json" as="fetch" crossorigin="use-credentials">
+    <link rel="prefetch" href="_framework/dotnet.native.wasm" as="fetch" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%">
+            <circle r="40%" cx="50%" cy="50%">
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script type="module">
+      import { BrotliDecode } from './decode.min.js';
+      Blazor.start({
+        webAssembly: {
+          loadBootResource: function (type, name, defaultUri, integrity) {
+            if (type !== 'dotnetjs' && location.hostname !== 'localhost' && type !== 'configuration' && type !== 'manifest') {
+              return (async function () {
+                const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                if (!response.ok) {
+                  throw new Error(response.statusText);
+                }
+                const originalResponseBuffer = await response.arrayBuffer();
+                const originalResponseArray = new Int8Array(originalResponseBuffer);
+                const decompressedResponseArray = BrotliDecode(originalResponseArray);
+                const contentType = type === 
+                  'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                return new Response(decompressedResponseArray, 
+                  { headers: { 'content-type': contentType } });
+              })();
+            }
+          }
+        }
+      });
+    </script>
+
+</body>
+
+</html>

@@ -8,7 +8,7 @@
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
     <CompressionEnabled>true</CompressionEnabled>
     <PublishTrimmed>true</PublishTrimmed>
-    <TrimMode>link</TrimMode>
+    <TrimMode>full</TrimMode>
     <!-- <WasmEnableThreads>true</WasmEnableThreads> -->
   </PropertyGroup>
 

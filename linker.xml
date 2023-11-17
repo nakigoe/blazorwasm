@@ -1,5 +1,6 @@
 <linker>
   <assembly fullname="nakigoe">
     <type fullname="nakigoe.Layouts.MainLayout" preserve="all" />
+    <type fullname="nakigoe.Pages.Index" preserve="all" />
   </assembly>
 </linker>

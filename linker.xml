@@ -11,6 +11,9 @@
   <assembly fullname="System.Text.Json">
     <type fullname="System.Text.Json.JsonSerializer" preserve="all" />
   </assembly>
+  <assembly fullname="System.Net.Http.Json">
+    <type fullname="System.Net.Http.Json.HttpClientJsonExtensions" preserve="all" />
+  </assembly>
   <assembly fullname="System.Private.CoreLib">
     <type fullname="System.DateOnly" preserve="all" />
   </assembly>

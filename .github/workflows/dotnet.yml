@@ -24,7 +24,7 @@ jobs:
       - name: Publish
         run: |
           cp wwwroot/index.html wwwroot/404.html
-          dotnet publish nakigoe.csproj --configuration Release -p:CompressionEnabled=true -p:PublishTrimmed=true
+          dotnet publish nakigoe.csproj --configuration Release
 
       # Publish the website
       - name: GitHub Pages action

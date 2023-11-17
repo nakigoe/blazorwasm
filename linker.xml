@@ -1,5 +1,5 @@
 <linker>
-  <assembly fullname="AssemblyName">
+  <assembly fullname="nakigoe">
     <type fullname="nakigoe.Layouts.MainLayout" preserve="all" />
   </assembly>
 </linker>

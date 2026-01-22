@@ -14,12 +14,11 @@ The website for hosting is published into the `gh-pages` branch of the repositor
 
 <b>You have to point to the `gh-pages` branch of Your repository from Your hosting provider.</b>
 
-I recommend utilizing Vercel as a free static websites hosting service since it's completely free, has seamless integration with GitHub, simple interface, power&#8209;user settings (environment, etc). Disclaimer: I have no affiliation with Vercel.
+I recommend utilizing Vercel as a free static websites hosting service since it's completely free, has seamless integration with GitHub, simple interface, power&#8209;user settings (environment, etc). (I have no affiliation with Vercel).
 
 Even more good news: You are allowed to keep the GitHub repository <em><b>PRIVATE</b></em> when publishing the website with Vercel!!!
 
-<br> Please write if You would like to utilize my services or to take programming lessons: nakigoetenshi@gmail.com
-<br> $60 per hour
+Donate to support the teaching work: https://nakigoe.org/en/donate
 
 <h2 style="margin: 0 auto" align="center">Put stars on GitHub and share!!!</h2>
 
@@ -34,6 +33,10 @@ Even more good news: You are allowed to keep the GitHub repository <em><b>PRIVAT
 ❥ Подробные инструкции к темплейту: <a href="https://nakigoe.org/ru/articles/host" target="_blank">«Бесплатный хостинг сайта C# Blazor WebAssembly»</a>
 
 <h2 style="margin: 0 auto" align="center">Добавьте звезду на репозиторий и делитесь сноской со всеми!</h2>
+
+Отправляйте донат на обновление кода и новые видео-курсы: https://nakigoe.org/ru/donate
+
+Пишите, если необходимы частные уроки.
 
 <br>
 <p style="margin: 0 auto" align="center">Please cast an eye on my website:</p>

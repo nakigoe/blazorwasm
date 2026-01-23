@@ -1,0 +1,25 @@
+{
+  "dirExcludes": [
+    "secrets",
+    "bootstrap",
+    "bin",
+    "obj",
+    ".vs",
+    ".vscode",
+    "__pycache__",
+    ".git",
+    ".idea"
+  ],
+  "fileExcludes": [
+    "secrets.*",
+    "*.exe",
+    "*.dll",
+    "*.bin",
+    "*.msi",
+    "*.zip",
+    "*.pdf",
+    ".gitignore"
+  ],
+  "preferredEditor": "",
+  "lastLocation": ""
+}

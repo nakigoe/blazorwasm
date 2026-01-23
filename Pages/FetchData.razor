@@ -1,5 +1,8 @@
 ﻿@page "/fetchdata"
+@using nakigoe.Models
+@using nakigoe.Serialization
 @inject HttpClient Http
+@inject ILogger<FetchData> Logger
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -7,7 +10,11 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
+@if (loadError is not null)
+{
+    <div class="alert alert-danger" role="alert">@loadError</div>
+}
+else if (forecasts is null)
 {
     <p><em>Loading...</em></p>
 }
@@ -37,21 +44,21 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    WeatherForecast[]? forecasts;
+    string? loadError;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
-    }
-
-    public class WeatherForecast
-    {
-        public DateOnly Date { get; set; }
-
-        public int TemperatureC { get; set; }
-
-        public string? Summary { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        try
+        {
+            forecasts = await Http.GetFromJsonAsync(
+                "sample-data/weather.json",
+                AppJsonContext.Default.WeatherForecastArray);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load sample-data/weather.json");
+            loadError = "Failed to load sample-data/weather.json. Check the Network tab for a 404 and verify <base href> for your deployment path.";
+        }
     }
 }

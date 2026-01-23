@@ -2,7 +2,7 @@
 
 <h1 id="en" name="en"><a href="https://blazorwasm.nakigoe.org" target="_blank">blazorwasm.nakigoe.org</a></h1>
 
-# Blazor WebAssembly .NET 8 hosting&#8209;ready website
+# Blazor WebAssembly .NET 10 hosting&#8209;ready website
 
 Production-level (static websites' hosting-ready) manually upgraded blazorwasm template.
 

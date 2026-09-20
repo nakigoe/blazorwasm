@@ -1,5 +1,9 @@
 name: "Publish application"
-on: push
+on:
+  push:
+    branches:
+      - main
+
 permissions:
   contents: write
   
@@ -30,10 +34,9 @@ jobs:
 
       # Publish the website
       - name: GitHub Pages action
-        if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on main
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # Most “push-to-branch” deploy actions can use the built-in GITHUB_TOKEN, no PAT setup needed
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Most “push-to-branch” deploy actions can use the built-in GITHUB_TOKEN, no PAT setup needed (but you still can do PAT, just for experience)
           publish_branch: gh-pages
           publish_dir: bin/Release/net10.0/publish/wwwroot
           allow_empty_commit: false
